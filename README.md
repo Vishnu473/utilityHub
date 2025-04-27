@@ -21,49 +21,72 @@ Currently, the app focuses on the **Ideas** feature.
 - Filter ideas by title, purpose, description, category, or tools.
 - Sort ideas by created date and category.
 
+Of course! Here’s a full **Project Setup** guide with your provided commands integrated, written cleanly for easy understanding:
+
 ---
 
-## 📂 Folder Structure (focused on Ideas)
+## 📋 Project Setup Guide
 
-app/
- ┣ tabs/ideasHome.tsx (Home screen for Ideas)
- ┣ ideas/
- ┃ ┣ addEditIdea.tsx (Add or edit an idea)
- ┃ ┗ [id].tsx (View individual idea)
+### Prerequisites
 
-components/
- ┣ ideas/
- ┃ ┣ activeIdeas.tsx (List active ideas)
- ┃ ┣ deletedIdeas.tsx (List deleted ideas)
- ┃ ┣ ideaItem.tsx (Single idea item)
- ┃ ┣ deleteIdeaItem.tsx (Deleted idea item)
- ┃ ┣ FilterSort/
- ┃ ┃ ┣ filterModal.tsx (Filter modal)
- ┃ ┃ ┣ filteredChip.tsx (Applied filters chip)
- ┃ ┃ ┗ sortDropDown.tsx (Sort dropdown)
+Make sure you have the following installed before starting:
 
-hooks/
- ┣ useIdeas.ts (Manage all ideas)
- ┣ useDeletedIdeas.ts (Manage deleted ideas)
- ┣ useFilteredIdeas.ts (Manage filters)
+- **Node.js** (version 18.x or later recommended)  
+  [Download Node.js](https://nodejs.org/)
 
-storage/
- ┣ ideas/
- ┃ ┣ ideaSelectors.ts (Selectors for reading ideas)
- ┃ ┗ ideaService.ts (Service for adding, updating, deleting ideas)
+- **npm** (comes with Node.js)
 
-utils/
- ┣ ideas/
- ┃ ┗ ideaFilterSort.ts (Filtering and sorting logic)
+- **Expo CLI**  
+  Install it globally if not already installed:
+  ```bash
+  npm install -g expo-cli
+  ```
 
-## 🚀 How to Run
+- **Expo Go App** (on your mobile device)  
+  [Download for Android](https://play.google.com/store/apps/details?id=host.exp.exponent) | [Download for iOS](https://apps.apple.com/app/expo-go/id982107779)
+
+---
+
+### 🛠️ Installation
+
+1. **Clone the repository** (if applicable):
+   ```bash
+   git clone https://github.com/Vishnu473/utilityHub.git
+   cd utilityHub
+   ```
+
+2. **Install project dependencies**:
+   ```bash
+   npm install
+   ```
+
+---
+
+### 🚀 How to Run
+
+To start the project locally:
 
 ```bash
-npm install
 npx expo start
 ```
 
-Then scan the QR code using the **Expo Go app**.
+- A new tab will open in your browser showing the **Metro Bundler**.
+- Scan the QR code using the **Expo Go app** on your phone.
+
+---
+
+### ⚙️ Additional Setup Tips
+
+- **If you're using an emulator** (Android Studio or iOS Simulator):
+  - Make sure the emulator is running.
+  - Press `a` (for Android) or `i` (for iOS) in the terminal after `expo start`.
+
+- **If you face any issues**:
+  - Try clearing the cache:
+    ```bash
+    npx expo start -c
+    ```
+  - Ensure your phone and computer are connected to the **same Wi-Fi network**.
 
 ---
 
