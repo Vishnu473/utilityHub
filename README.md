@@ -109,4 +109,4 @@ npx expo start
 
 ## 📜 License
 
-This project is for personal use. No commercial license yet.
+This project is licensed under the [MIT License](./LICENSE).
