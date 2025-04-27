@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Smart Grocery App",
+    "purpose": "Helps with meal planning and shopping",
+    "description": "Uses barcode scanner to track inventory and suggest recipes.",
+    "tools": ["React Native", "Firebase"],
+    "createdAt":"28-09-2024",
+    "category":""
+  },
+  {
+    "id": "2",
+    "title": "Social Media Manager",
+    "purpose": "AI-based scheduler and content tracker",
+    "description": "Lets you plan, schedule and analyze posts using OpenAI and analytics.",
+    "tools": ["Next.js", "Supabase", "OpenAI"],
+     "createdAt":"28-09-2024",
+    "category":""
+  }
+]

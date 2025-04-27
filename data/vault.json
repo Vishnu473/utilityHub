@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Google Account",
+    "username": "john.doe@gmail.com",
+    "password": "John#123",
+    "category": "Email",
+    "website":"https://google.com",
+    "notes":""
+  },
+  {
+    "id": "2",
+    "title": "Netflix",
+    "username": "johnnyflix",
+    "password": "Vishnu@123",
+    "website":"netflix.com",
+    "category": "Entertainment",
+    "notes":""
+  }
+]

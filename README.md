@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# 💡 Ideas Manager (React Native Expo App)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Expo](https://img.shields.io/badge/Expo-49.0.6-blue)
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green)
+![License](https://img.shields.io/badge/License-Personal%20Use-orange)
 
-## Get started
+This app lets you create, view, edit, filter, sort, and manage your personal ideas.  
+Built using **React Native**, **Expo**, and **TypeScript** with local storage via **MMKV**.
 
-1. Install dependencies
+🚧 Vault and AskAI features are under development.  
+Currently, the app focuses on the **Ideas** feature.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## ✨ Features (Ideas)
 
-   ```bash
-    npx expo start
-   ```
+- Add new ideas with title, purpose, category, description, and tools.
+- Edit existing ideas.
+- Soft delete ideas (move to deleted ideas tab).
+- Restore or permanently delete ideas.
+- Filter ideas by title, purpose, description, category, or tools.
+- Sort ideas by created date and category.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📂 Folder Structure (focused on Ideas)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+app/
+ ┣ tabs/ideasHome.tsx (Home screen for Ideas)
+ ┣ ideas/
+ ┃ ┣ addEditIdea.tsx (Add or edit an idea)
+ ┃ ┗ [id].tsx (View individual idea)
 
-## Get a fresh project
+components/
+ ┣ ideas/
+ ┃ ┣ activeIdeas.tsx (List active ideas)
+ ┃ ┣ deletedIdeas.tsx (List deleted ideas)
+ ┃ ┣ ideaItem.tsx (Single idea item)
+ ┃ ┣ deleteIdeaItem.tsx (Deleted idea item)
+ ┃ ┣ FilterSort/
+ ┃ ┃ ┣ filterModal.tsx (Filter modal)
+ ┃ ┃ ┣ filteredChip.tsx (Applied filters chip)
+ ┃ ┃ ┗ sortDropDown.tsx (Sort dropdown)
 
-When you're ready, run:
+hooks/
+ ┣ useIdeas.ts (Manage all ideas)
+ ┣ useDeletedIdeas.ts (Manage deleted ideas)
+ ┣ useFilteredIdeas.ts (Manage filters)
+
+storage/
+ ┣ ideas/
+ ┃ ┣ ideaSelectors.ts (Selectors for reading ideas)
+ ┃ ┗ ideaService.ts (Service for adding, updating, deleting ideas)
+
+utils/
+ ┣ ideas/
+ ┃ ┗ ideaFilterSort.ts (Filtering and sorting logic)
+
+## 🚀 How to Run
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Then scan the QR code using the **Expo Go app**.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+# 🛠 Tech Stack
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- React Native (Expo)
+- TypeScript
+- MMKV Storage
+- Tailwind CSS (if you used it)
+- React Navigation
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🔥 Upcoming Features
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- 🔒 Vault (Save passwords securely)
+- 🤖 AskAI (Ask your saved AI assistant questions)
+
+---
+
+## 📜 License
+
+This project is for personal use. No commercial license yet.
