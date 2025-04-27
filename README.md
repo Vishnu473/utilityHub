@@ -7,6 +7,9 @@
 This app lets you create, view, edit, filter, sort, and manage your personal ideas.  
 Built using **React Native**, **Expo**, and **TypeScript** with local storage via **MMKV**.
 
+You can Download the latest [APK here](https://drive.google.com/drive/folders/1szm5TXLnS00ZzmAlvZJXexT5nWc2AO7z?usp=drive_link).    
+Use at your own risk. APK is provided for personal testing purposes.
+
 🚧 Vault and AskAI features are under development.  
 Currently, the app focuses on the **Ideas** feature.
 
