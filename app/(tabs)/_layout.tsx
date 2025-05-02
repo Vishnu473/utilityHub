@@ -20,7 +20,7 @@ const TabIcon = ({ focused, icon, name }: any) => {
         width: focused ? 95 : 60, 
         height: 45, 
         borderRadius: 50, 
-        backgroundColor: focused ? colors.primaryLight : 'transparent', 
+        backgroundColor: focused ? '#101010' : 'transparent', 
         justifyContent: "center", 
         flexDirection: focused ? 'row' : 'column', 
         alignItems: 'center', 
@@ -29,7 +29,7 @@ const TabIcon = ({ focused, icon, name }: any) => {
       }}
     >
       <Ionicons 
-        color={focused ? colors.primary : colors.textLight} 
+        color={focused ? '#fff' : '#454545'} 
         name={icon} 
         size={22} 
       />
@@ -38,7 +38,7 @@ const TabIcon = ({ focused, icon, name }: any) => {
           style={{ 
             fontSize: 14, 
             fontWeight: '600', 
-            color: colors.primary
+            color: '#fff'
           }}
         >
           {name}
