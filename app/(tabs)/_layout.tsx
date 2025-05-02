@@ -4,40 +4,40 @@ import React from 'react'
 import { Text, View } from 'react-native'
 
 const colors = {
-  primary: '#3A59D1',      
-  primaryLight: '#AFDDFF',  
-  secondary: '#adadad',     
-  textDark: '#4B5563',      
-  textLight: '#9CA3AF',     
-  background: '#FFFFFF',    
-  surface: '#F9FAFB', 
+  primary: '#3A59D1',
+  primaryLight: '#AFDDFF',
+  secondary: '#adadad',
+  textDark: '#4B5563',
+  textLight: '#9CA3AF',
+  background: '#FFFFFF',
+  surface: '#F9FAFB',
 }
 
 const TabIcon = ({ focused, icon, name }: any) => {
   return (
-    <View 
-      style={{ 
-        width: focused ? 95 : 60, 
-        height: 45, 
-        borderRadius: 50, 
-        backgroundColor: focused ? '#101010' : 'transparent', 
-        justifyContent: "center", 
-        flexDirection: focused ? 'row' : 'column', 
-        alignItems: 'center', 
+    <View
+      style={{
+        width: focused ? 95 : 60,
+        height: 45,
+        borderRadius: 50,
+        backgroundColor: focused ? '#101010' : 'transparent',
+        justifyContent: "center",
+        flexDirection: focused ? 'row' : 'column',
+        alignItems: 'center',
         gap: 6,
         paddingHorizontal: 12
       }}
     >
-      <Ionicons 
-        color={focused ? '#fff' : '#454545'} 
-        name={icon} 
-        size={22} 
+      <Ionicons
+        color={focused ? '#fff' : '#454545'}
+        name={icon}
+        size={22}
       />
       {focused && (
-        <Text 
-          style={{ 
-            fontSize: 14, 
-            fontWeight: '600', 
+        <Text
+          style={{
+            fontSize: 14,
+            fontWeight: '600',
             color: '#fff'
           }}
         >
@@ -50,7 +50,7 @@ const TabIcon = ({ focused, icon, name }: any) => {
 
 const TabLayout = () => {
   return (
-    <Tabs 
+    <Tabs
       screenOptions={{
         tabBarShowLabel: false,
         tabBarItemStyle: {
@@ -83,7 +83,7 @@ const TabLayout = () => {
           tabBarIcon: ({ focused }) => (
             <TabIcon focused={focused} name='Vault' icon="lock-closed" />
           )
-        }} 
+        }}
       />
       <Tabs.Screen
         name='ideasHome'
@@ -93,17 +93,18 @@ const TabLayout = () => {
           tabBarIcon: ({ focused }) => (
             <TabIcon focused={focused} name='Ideas' icon="bulb" />
           )
-        }} 
+        }}
       />
+
       <Tabs.Screen
-        name="askAIHome"
+        name="askAIDashboard"
         options={{
           title: 'Ask AI',
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} name='AskAI' icon="chatbubbles" />
+            <TabIcon focused={focused} name='Ask AI' icon="chatbubbles" />
           )
-        }} 
+        }}
       />
       {/* <Tabs.Screen
         name="profileHome"

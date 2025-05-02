@@ -15,7 +15,7 @@ type AskAIProps = {
   topic: string | null;
 };
 
-export const useAskAI = () => {
+export const useAskAIChat = () => {
   const queryClient = useQueryClient();
   const [lastQuestionError, setLastQuestionError] = useState<string | null>(null);
 
