@@ -8,9 +8,10 @@ const MAX_ENTRIES = 40;
 export const addAskAI = async (entry: AskAI) => {
   const list = await getAskAIList();
 
-  const updatedList = [entry, ...list].slice(0, MAX_ENTRIES);
+  const updatedList = [...list, entry].slice(-MAX_ENTRIES); // Keep only latest N
   await saveData(ASK_AI_KEY, updatedList);
 };
+
 
 export const updateAskAIAnswer = async (id: string, answer: string) => {
   const list = await getAskAIList();

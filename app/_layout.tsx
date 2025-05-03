@@ -3,7 +3,7 @@ import { Stack } from 'expo-router';
 import { ScrollView, StatusBar, View } from 'react-native';
 import { GestureHandlerRootView, TapGestureHandler } from 'react-native-gesture-handler';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import queryClient from '../utils/askAI/queryClient';
+import queryClient from '../services/queryClient';
 import { useIdleReminder } from '@/hooks/useIdleReminder';
 import { useCallback, useEffect } from 'react';
 import Toast, { ToastProps } from 'react-native-toast-message';
@@ -19,10 +19,10 @@ export default function Layout() {
   }, []);
 
   const toastConfig = {
-    success: (props:ToastProps) => <CustomToast {...props} type="success" />,
-    error: (props:ToastProps) => <CustomToast {...props} type="error" />,
-    info: (props:ToastProps) => <CustomToast {...props} type="info" />,
-    warning: (props:ToastProps) => <CustomToast {...props} type="warning" />,
+    success: (props: ToastProps) => <CustomToast {...props} type="success" />,
+    error: (props: ToastProps) => <CustomToast {...props} type="error" />,
+    info: (props: ToastProps) => <CustomToast {...props} type="info" />,
+    warning: (props: ToastProps) => <CustomToast {...props} type="warning" />,
   };
 
   return (
@@ -33,16 +33,11 @@ export default function Layout() {
             <SafeAreaProvider>
               <SafeAreaView edges={['top', 'left', 'right']} style={{ flex: 1 }}>
                 <StatusBar backgroundColor="blue" barStyle="light-content" />
-                <ScrollView
-                  keyboardShouldPersistTaps="handled"
-                  onScrollBeginDrag={handleUserActivity}
+                <View style={{ flex: 1 }}
                   onTouchStart={handleUserActivity}
-                  contentContainerStyle={{ flexGrow: 1 }}
                 >
-                  <View style={{ flex: 1 }}>
-                    <Stack screenOptions={{ headerShown: false }} />
-                  </View>
-                </ScrollView>
+                  <Stack screenOptions={{ headerShown: false }} />
+                </View>
 
                 <Toast config={toastConfig} />
               </SafeAreaView>

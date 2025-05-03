@@ -45,7 +45,7 @@ export const askGemini = async (question: string) => {
           temperature: 0.7,      // Controls creativity (0 = factual, 1 = super creative)
           topK: 40,              // Focus on top 40 words
           topP: 0.95,            // Consider 95% best possibilities
-          maxOutputTokens: 512, // Longer, richer answers
+          maxOutputTokens: 2048, // Longer, richer answers
         },
       },
       {
@@ -56,7 +56,6 @@ export const askGemini = async (question: string) => {
     );
     if (response.data && response.data.candidates && response.data.candidates.length > 0 && response.data.candidates[0].content && response.data.candidates[0].content.parts && response.data.candidates[0].content.parts.length > 0) {
       const answer = response.data.candidates[0].content.parts[0].text;
-      console.log(answer);
       
       return answer.trim() || "No answer generated";
     } else {
