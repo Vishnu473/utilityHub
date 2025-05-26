@@ -24,8 +24,6 @@ Currently, the app focuses on the **Ideas** feature.
 - Filter ideas by title, purpose, description, category, or tools.
 - Sort ideas by created date and category.
 
-Of course! Here’s a full **Project Setup** guide with your provided commands integrated, written cleanly for easy understanding:
-
 ---
 
 ## 📋 Project Setup Guide
